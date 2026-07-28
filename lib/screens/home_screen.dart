@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../data/questions_repository.dart';
 import '../models/question_type.dart';
 import '../providers/quiz_session.dart';
+import '../services/auth_service.dart';
+import '../services/firebase_bootstrap.dart';
 import 'category_screen.dart';
+import 'leaderboard_screen.dart';
+import 'login_screen.dart';
 import 'quiz_screen.dart';
 import 'test_papers_screen.dart';
 
@@ -18,6 +23,37 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Aptitude Test'),
+        actions: [
+          if (FirebaseBootstrap.enabled)
+            IconButton(
+              tooltip: 'Live Leaderboard',
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const LeaderboardScreen()),
+              ),
+              icon: const Icon(Icons.leaderboard),
+            ),
+          IconButton(
+            tooltip: context.watch<AuthService>().isLoggedIn ? 'Logout' : 'Login',
+            onPressed: () async {
+              final auth = context.read<AuthService>();
+              if (auth.isLoggedIn) {
+                await auth.signOut();
+              } else {
+                if (!context.mounted) return;
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const LoginScreen()),
+                );
+              }
+            },
+            icon: Icon(
+              context.watch<AuthService>().isLoggedIn
+                  ? Icons.logout
+                  : Icons.login,
+            ),
+          ),
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -25,6 +61,25 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              if (FirebaseBootstrap.enabled)
+                Card(
+                  color: Colors.green.shade50,
+                  child: const ListTile(
+                    leading: Icon(Icons.cloud_done, color: Colors.green),
+                    title: Text('Real-time mode active'),
+                    subtitle: Text('Scores sync live to Firebase leaderboard'),
+                  ),
+                )
+              else
+                Card(
+                  color: Colors.orange.shade50,
+                  child: const ListTile(
+                    leading: Icon(Icons.cloud_off, color: Colors.orange),
+                    title: Text('Offline mode'),
+                    subtitle: Text('Run flutterfire configure to enable real-time'),
+                  ),
+                ),
+              const SizedBox(height: 16),
               Card(
                 child: Padding(
                   padding: const EdgeInsets.all(24),
@@ -72,6 +127,16 @@ class HomeScreen extends StatelessWidget {
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => const TestPapersScreen()),
+                ),
+              ),
+              const SizedBox(height: 12),
+              _ActionCard(
+                icon: '🏆',
+                title: 'Live Leaderboard',
+                subtitle: 'Real-time top scores from all users',
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const LeaderboardScreen()),
                 ),
               ),
               const SizedBox(height: 12),

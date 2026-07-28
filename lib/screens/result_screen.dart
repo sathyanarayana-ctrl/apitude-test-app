@@ -1,16 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../providers/quiz_session.dart';
+import '../services/auth_service.dart';
+import '../services/firebase_bootstrap.dart';
+import '../services/leaderboard_service.dart';
 import '../theme/app_theme.dart';
 import 'home_screen.dart';
 
-class ResultScreen extends StatelessWidget {
+class ResultScreen extends StatefulWidget {
   const ResultScreen({super.key, required this.session});
 
   final QuizSession session;
 
+  @override
+  State<ResultScreen> createState() => _ResultScreenState();
+}
+
+class _ResultScreenState extends State<ResultScreen> {
+  bool _scoreSaved = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _saveScoreIfPossible();
+  }
+
+  Future<void> _saveScoreIfPossible() async {
+    if (_scoreSaved || !FirebaseBootstrap.enabled) return;
+
+    final auth = context.read<AuthService>();
+    final user = auth.currentUser;
+    if (user == null) return;
+
+    await LeaderboardService.saveScore(
+      userId: user.uid,
+      userName: auth.displayName,
+      testName: widget.session.title,
+      score: widget.session.scorePercent,
+      correctCount: widget.session.correctCount,
+      totalQuestions: widget.session.totalQuestions,
+    );
+
+    if (mounted) {
+      setState(() => _scoreSaved = true);
+    }
+  }
+
   String get _grade {
-    final score = session.scorePercent;
+    final score = widget.session.scorePercent;
     if (score >= 90) return 'Excellent';
     if (score >= 75) return 'Very Good';
     if (score >= 60) return 'Good';
@@ -19,7 +57,7 @@ class ResultScreen extends StatelessWidget {
   }
 
   Color get _gradeColor {
-    final score = session.scorePercent;
+    final score = widget.session.scorePercent;
     if (score >= 75) return AppTheme.success;
     if (score >= 40) return Colors.orange;
     return AppTheme.error;
@@ -27,6 +65,9 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final session = widget.session;
+    final auth = context.watch<AuthService>();
+
     return Scaffold(
       appBar: AppBar(title: const Text('Your Result')),
       body: SingleChildScrollView(
@@ -34,6 +75,22 @@ class ResultScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            if (_scoreSaved)
+              Card(
+                color: Colors.green.shade50,
+                child: const ListTile(
+                  leading: Icon(Icons.cloud_upload, color: Colors.green),
+                  title: Text('Score saved to live leaderboard'),
+                ),
+              ),
+            if (FirebaseBootstrap.enabled && !auth.isLoggedIn)
+              Card(
+                color: Colors.orange.shade50,
+                child: const ListTile(
+                  leading: Icon(Icons.info_outline, color: Colors.orange),
+                  title: Text('Login to save your score to the leaderboard'),
+                ),
+              ),
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(24),

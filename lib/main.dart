@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import 'screens/home_screen.dart';
+import 'services/auth_service.dart';
+import 'services/firebase_bootstrap.dart';
+import 'screens/auth_gate.dart';
 import 'theme/app_theme.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await FirebaseBootstrap.init();
   runApp(const AptitudeTestApp());
 }
 
@@ -12,11 +17,14 @@ class AptitudeTestApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Aptitude Test',
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme,
-      home: const HomeScreen(),
+    return ChangeNotifierProvider(
+      create: (_) => AuthService(),
+      child: MaterialApp(
+        title: 'Aptitude Test',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.lightTheme,
+        home: const AuthGate(),
+      ),
     );
   }
 }

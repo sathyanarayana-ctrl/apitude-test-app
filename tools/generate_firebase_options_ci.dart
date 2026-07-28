@@ -1,4 +1,4 @@
-name: Generate firebase_options.dart for CI
+// Generate firebase_options.dart for CI
 import 'dart:io';
 
 void main() {

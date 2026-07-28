@@ -35,14 +35,13 @@ class GoogleSheetSource {
 
 class TestPapersConfig {
   static const List<GoogleSheetSource> googleSheetSources = [
-    // Example — replace with your real Google Sheet links:
-    // GoogleSheetSource(
-    //   sheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-    //   gid: '0',
-    //   title: 'Aptitude Test Paper 1',
-    //   description: 'Imported from Google Sheets',
-    //   durationMinutes: 45,
-    //   category: 'quantitative',
-    // ),
+    GoogleSheetSource(
+      sheetId: '1wqayZDw8mLilWHrrSHVtOO20gr1PyfTCITlAMBd5o-o',
+      gid: '0',
+      title: 'Aptitude Test Paper (Google Sheet)',
+      description: 'Imported from shared Google Sheets link',
+      durationMinutes: 45,
+      category: 'generalAptitude',
+    ),
   ];
 }

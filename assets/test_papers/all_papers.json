@@ -1,0 +1,719 @@
+{
+  "papers": [
+    {
+      "id": "tp_quantitative_1",
+      "title": "Quantitative Aptitude Test Paper 1",
+      "description": "Percentages, ratios, profit & loss, and speed problems",
+      "category": "quantitative",
+      "durationMinutes": 30,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpq1",
+          "type": "quantitative",
+          "question": "A number is increased by 20% and then decreased by 20%. Net change is:",
+          "options": ["4% decrease", "4% increase", "No change", "2% decrease"],
+          "correctIndex": 0,
+          "explanation": "1.2 × 0.8 = 0.96 → 4% decrease.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpq2",
+          "type": "quantitative",
+          "question": "CP = ₹800, SP = ₹920. Profit %?",
+          "options": ["12%", "15%", "18%", "20%"],
+          "correctIndex": 1,
+          "explanation": "Profit = 120; 120/800 × 100 = 15%.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpq3",
+          "type": "quantitative",
+          "question": "Average of 5 numbers is 20. If one number is removed, average becomes 18. Removed number?",
+          "options": ["24", "26", "28", "30"],
+          "correctIndex": 2,
+          "explanation": "Sum = 100; new sum = 72; removed = 28.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpq4",
+          "type": "quantitative",
+          "question": "A can do a work in 12 days, B in 18 days. Together they finish in:",
+          "options": ["6.4 days", "7.2 days", "8 days", "9 days"],
+          "correctIndex": 1,
+          "explanation": "1/12 + 1/18 = 5/36 → 36/5 = 7.2 days.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpq5",
+          "type": "quantitative",
+          "question": "Simple interest on ₹10,000 at 8% for 3 years?",
+          "options": ["₹2,000", "₹2,400", "₹2,800", "₹3,000"],
+          "correctIndex": 1,
+          "explanation": "SI = 10000 × 8 × 3 / 100 = ₹2,400.",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "id": "tp_logical_1",
+      "title": "Logical Reasoning Test Paper 1",
+      "description": "Statements, assumptions, and logical deductions",
+      "category": "logicalReasoning",
+      "durationMinutes": 25,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpl1",
+          "type": "logicalReasoning",
+          "question": "All birds have wings. Penguins are birds. Therefore:",
+          "options": ["Penguins can fly", "Penguins have wings", "All winged animals are birds", "None"],
+          "correctIndex": 1,
+          "explanation": "From the statements, penguins have wings.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpl2",
+          "type": "logicalReasoning",
+          "question": "If NO CODE is YES, YES is MAYBE, then CODE is:",
+          "options": ["NO", "YES", "MAYBE", "Cannot say"],
+          "correctIndex": 2,
+          "explanation": "CODE maps to YES, YES maps to MAYBE → CODE is MAYBE.",
+          "difficulty": "hard"
+        },
+        {
+          "id": "tpl3",
+          "type": "logicalReasoning",
+          "question": "Statement: All successful people work hard.\nConclusion: Ram works hard, so Ram is successful.",
+          "options": ["Valid", "Invalid", "Partially valid", "Data insufficient"],
+          "correctIndex": 1,
+          "explanation": "Affirming the consequent — invalid reasoning.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpl4",
+          "type": "logicalReasoning",
+          "question": "Which comes next: J, F, M, A, M, J, ?",
+          "options": ["J", "A", "S", "O"],
+          "correctIndex": 0,
+          "explanation": "First letters of months: Jan, Feb, Mar, Apr, May, Jun, Jul.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpl5",
+          "type": "logicalReasoning",
+          "question": "If A > B and B > C, which is definitely true?",
+          "options": ["C > A", "A > C", "B = C", "None"],
+          "correctIndex": 1,
+          "explanation": "Transitive property: A > B > C → A > C.",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "id": "tp_verbal_1",
+      "title": "Verbal Ability Test Paper 1",
+      "description": "Vocabulary, grammar, and sentence correction",
+      "category": "verbalAbility",
+      "durationMinutes": 20,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpv1",
+          "type": "verbalAbility",
+          "question": "Choose the correct spelling:",
+          "options": ["Accomodation", "Accommodation", "Acommodation", "Acomodation"],
+          "correctIndex": 1,
+          "explanation": "Correct spelling is Accommodation (double c, double m).",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpv2",
+          "type": "verbalAbility",
+          "question": "Antonym of 'Fragile':",
+          "options": ["Weak", "Sturdy", "Soft", "Thin"],
+          "correctIndex": 1,
+          "explanation": "Fragile means easily broken; sturdy is the opposite.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpv3",
+          "type": "verbalAbility",
+          "question": "Correct sentence:",
+          "options": ["He don't like tea", "He doesn't likes tea", "He doesn't like tea", "He not like tea"],
+          "correctIndex": 2,
+          "explanation": "Third person singular: doesn't + base verb.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpv4",
+          "type": "verbalAbility",
+          "question": "Synonym of 'Ephemeral':",
+          "options": ["Permanent", "Short-lived", "Strong", "Ancient"],
+          "correctIndex": 1,
+          "explanation": "Ephemeral means lasting for a very short time.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpv5",
+          "type": "verbalAbility",
+          "question": "One word for 'A person who loves books':",
+          "options": ["Bibliophile", "Philatelist", "Numismatist", "Audiophile"],
+          "correctIndex": 0,
+          "explanation": "Bibliophile = lover of books.",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": "tp_data_1",
+      "title": "Data Interpretation Test Paper 1",
+      "description": "Tables, percentages, and chart-based problems",
+      "category": "dataInterpretation",
+      "durationMinutes": 25,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpd1",
+          "type": "dataInterpretation",
+          "question": "Revenue: Q1=50L, Q2=60L, Q3=70L, Q4=80L. Total annual revenue?",
+          "options": ["240L", "250L", "260L", "270L"],
+          "correctIndex": 2,
+          "explanation": "50+60+70+80 = 260 lakh.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpd2",
+          "type": "dataInterpretation",
+          "question": "Class A: 40 students, avg marks 70. Class B: 60 students, avg 80. Combined average?",
+          "options": ["74", "75", "76", "77"],
+          "correctIndex": 2,
+          "explanation": "Total = 2800+4800=7600; 7600/100=76.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpd3",
+          "type": "dataInterpretation",
+          "question": "Production rose from 200 to 250 units. % increase?",
+          "options": ["20%", "25%", "30%", "50%"],
+          "correctIndex": 1,
+          "explanation": "50/200 × 100 = 25%.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpd4",
+          "type": "dataInterpretation",
+          "question": "Pie chart: Science 120°, Arts 90°, Commerce 150°. Commerce share?",
+          "options": ["1/3", "5/12", "1/2", "2/5"],
+          "correctIndex": 1,
+          "explanation": "150/360 = 5/12.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpd5",
+          "type": "dataInterpretation",
+          "question": "Expenses: Rent 30%, Food 25%, Travel 20%, Others 25%. If total ₹40,000, rent amount?",
+          "options": ["₹10,000", "₹12,000", "₹14,000", "₹16,000"],
+          "correctIndex": 1,
+          "explanation": "30% of 40000 = ₹12,000.",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "id": "tp_analytical_1",
+      "title": "Analytical Reasoning Test Paper 1",
+      "description": "Ranking, seating arrangement, and direction sense",
+      "category": "analyticalReasoning",
+      "durationMinutes": 30,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpa1",
+          "type": "analyticalReasoning",
+          "question": "A is taller than B. C is shorter than B. Who is shortest?",
+          "options": ["A", "B", "C", "Cannot say"],
+          "correctIndex": 2,
+          "explanation": "A > B > C → C is shortest.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpa2",
+          "type": "analyticalReasoning",
+          "question": "Facing East, turn left, then left again. Final direction?",
+          "options": ["North", "South", "East", "West"],
+          "correctIndex": 3,
+          "explanation": "East → North → West.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpa3",
+          "type": "analyticalReasoning",
+          "question": "6 people sit in a row. P is left of Q. R is right of Q. S is at right end. Q is:",
+          "options": ["At left end", "In middle", "Second from right", "At right end"],
+          "correctIndex": 2,
+          "explanation": "Valid order: P-Q-R-?-?-S places Q second from right.",
+          "difficulty": "hard"
+        },
+        {
+          "id": "tpa4",
+          "type": "analyticalReasoning",
+          "question": "In a row of 25, Mohan is 10th from left. Position from right?",
+          "options": ["14", "15", "16", "17"],
+          "correctIndex": 2,
+          "explanation": "25 - 10 + 1 = 16.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpa5",
+          "type": "analyticalReasoning",
+          "question": "Monday's next day after 3 days is:",
+          "options": ["Thursday", "Friday", "Saturday", "Sunday"],
+          "correctIndex": 0,
+          "explanation": "Monday + 3 days = Thursday.",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "id": "tp_nonverbal_1",
+      "title": "Non-Verbal Reasoning Test Paper 1",
+      "description": "Figure series, patterns, and spatial reasoning",
+      "category": "nonVerbalReasoning",
+      "durationMinutes": 20,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpn1",
+          "type": "nonVerbalReasoning",
+          "question": "Series: 1, 4, 9, 16, ?",
+          "options": ["20", "24", "25", "36"],
+          "correctIndex": 2,
+          "explanation": "Perfect squares: 5² = 25.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpn2",
+          "type": "nonVerbalReasoning",
+          "question": "Mirror image of 'p' is:",
+          "options": ["p", "b", "d", "q"],
+          "correctIndex": 3,
+          "explanation": "Vertical mirror flips p to q.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpn3",
+          "type": "nonVerbalReasoning",
+          "question": "Pattern: ▲, ▲▲, ▲▲▲, ?",
+          "options": ["▲▲", "▲▲▲▲", "▲▲▲▲▲", "▲"],
+          "correctIndex": 1,
+          "explanation": "Number of triangles increases by 1 each step.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpn4",
+          "type": "nonVerbalReasoning",
+          "question": "Odd one out: Circle, Square, Triangle, Cube",
+          "options": ["Circle", "Square", "Triangle", "Cube"],
+          "correctIndex": 3,
+          "explanation": "Cube is 3D; others are 2D shapes.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpn5",
+          "type": "nonVerbalReasoning",
+          "question": "Complete: 2, 6, 12, 20, ?",
+          "options": ["28", "30", "32", "36"],
+          "correctIndex": 1,
+          "explanation": "Differences +4,+6,+8,+10 → next 30.",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": "tp_syllogism_1",
+      "title": "Syllogism Test Paper 1",
+      "description": "Two-statement and three-statement syllogisms",
+      "category": "syllogism",
+      "durationMinutes": 20,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tps1",
+          "type": "syllogism",
+          "question": "All dogs are animals. All animals breathe. Conclusion: All dogs breathe.",
+          "options": ["True", "False", "Uncertain", "None"],
+          "correctIndex": 0,
+          "explanation": "Valid syllogism — conclusion follows.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tps2",
+          "type": "syllogism",
+          "question": "Some A are B. All B are C. Conclusion: Some A are C.",
+          "options": ["True", "False", "Uncertain", "None"],
+          "correctIndex": 0,
+          "explanation": "Some A that are B must also be C.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tps3",
+          "type": "syllogism",
+          "question": "No pen is pencil. Some pencils are erasers. Conclusion: Some erasers are not pens.",
+          "options": ["True", "False", "Uncertain", "None"],
+          "correctIndex": 2,
+          "explanation": "Cannot be determined with certainty.",
+          "difficulty": "hard"
+        },
+        {
+          "id": "tps4",
+          "type": "syllogism",
+          "question": "All managers are leaders. All leaders are decision makers. Conclusion: All managers are decision makers.",
+          "options": ["True", "False", "Uncertain", "None"],
+          "correctIndex": 0,
+          "explanation": "Chain syllogism — valid conclusion.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tps5",
+          "type": "syllogism",
+          "question": "Some fruits are sweet. Some sweet things are healthy. Conclusion: Some fruits are healthy.",
+          "options": ["True", "False", "Uncertain", "None"],
+          "correctIndex": 2,
+          "explanation": "Middle term not distributed — uncertain.",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": "tp_blood_1",
+      "title": "Blood Relations Test Paper 1",
+      "description": "Family tree and relationship puzzles",
+      "category": "bloodRelations",
+      "durationMinutes": 20,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpb1",
+          "type": "bloodRelations",
+          "question": "A is father of B. B is father of C. A is ___ of C.",
+          "options": ["Father", "Grandfather", "Uncle", "Brother"],
+          "correctIndex": 1,
+          "explanation": "A → B → C makes A the grandfather.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpb2",
+          "type": "bloodRelations",
+          "question": "Pointing to a woman, Ravi said, 'She is daughter of my mother's only daughter.' Who is she?",
+          "options": ["Ravi's daughter", "Ravi's sister", "Ravi's mother", "Ravi's niece"],
+          "correctIndex": 3,
+          "explanation": "Mother's only daughter is Ravi's sister; her daughter is Ravi's niece.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpb3",
+          "type": "bloodRelations",
+          "question": "X is brother of Y. Y is mother of Z. X is ___ of Z.",
+          "options": ["Father", "Uncle", "Brother", "Grandfather"],
+          "correctIndex": 1,
+          "explanation": "X is Y's brother → maternal uncle of Z.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpb4",
+          "type": "bloodRelations",
+          "question": "M is husband of N. O is son of M. P is daughter of N. O is ___ of P.",
+          "options": ["Brother", "Cousin", "Uncle", "Father"],
+          "correctIndex": 0,
+          "explanation": "O and P share parents M and N → siblings.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpb5",
+          "type": "bloodRelations",
+          "question": "A + B means A is father of B. A - B means A is sister of B. Then P + Q - R means:",
+          "options": ["P is father of R", "Q is sister of R", "P is grandfather of R", "Q is mother of R"],
+          "correctIndex": 1,
+          "explanation": "P is father of Q; Q is sister of R.",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": "tp_coding_1",
+      "title": "Coding & Decoding Test Paper 1",
+      "description": "Letter shifting, number coding, and word coding",
+      "category": "codingDecoding",
+      "durationMinutes": 20,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpc1",
+          "type": "codingDecoding",
+          "question": "If APPLE = 50, GRAPE = 57 (sum of letter positions), MANGO = ?",
+          "options": ["48", "50", "52", "54"],
+          "correctIndex": 1,
+          "explanation": "M(13)+A(1)+N(14)+G(7)+O(15) = 50.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpc2",
+          "type": "codingDecoding",
+          "question": "In a code, TRAIN is written as USBJO. How is PLANE written?",
+          "options": ["QMBOF", "QMBOD", "QMAOF", "QMBPF"],
+          "correctIndex": 0,
+          "explanation": "Each letter +1: P→Q, L→M, A→B, N→O, E→F → QMBOF.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpc3",
+          "type": "codingDecoding",
+          "question": "If CAT is coded as 3120, how is DOG coded? (C=3,A=1,T=20)",
+          "options": ["4157", "4156", "4158", "4159"],
+          "correctIndex": 0,
+          "explanation": "D=4, O=15, G=7 → 4157.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpc4",
+          "type": "codingDecoding",
+          "question": "REVERSE written backwards is:",
+          "options": ["ESREVER", "ESREVRE", "ESREVER", "ESREVER"],
+          "correctIndex": 0,
+          "explanation": "REVERSE reversed = ESREVER.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpc5",
+          "type": "codingDecoding",
+          "question": "If 123 means 'go home now', 456 means 'come home soon', what does 'home' represent?",
+          "options": ["1", "2", "3", "4"],
+          "correctIndex": 1,
+          "explanation": "Common word 'home' is the middle symbol 2 in both codes.",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": "tp_clock_1",
+      "title": "Clock & Calendar Test Paper 1",
+      "description": "Clock angles, calendar days, and date problems",
+      "category": "clockCalendar",
+      "durationMinutes": 20,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpcl1",
+          "type": "clockCalendar",
+          "question": "Angle between hands at 6:00?",
+          "options": ["120°", "150°", "180°", "90°"],
+          "correctIndex": 2,
+          "explanation": "At 6:00 hands are opposite = 180°.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpcl2",
+          "type": "clockCalendar",
+          "question": "How many odd days in a normal year?",
+          "options": ["0", "1", "2", "3"],
+          "correctIndex": 1,
+          "explanation": "365 days = 52 weeks + 1 odd day.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpcl3",
+          "type": "clockCalendar",
+          "question": "Today is Wednesday. Day after 100 days?",
+          "options": ["Thursday", "Friday", "Saturday", "Sunday"],
+          "correctIndex": 1,
+          "explanation": "100 mod 7 = 2; Wed + 2 = Friday.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpcl4",
+          "type": "clockCalendar",
+          "question": "A clock gains 5 minutes every hour. If set right at 12 noon, time shown at 4 PM real time?",
+          "options": ["4:20 PM", "4:15 PM", "4:25 PM", "4:10 PM"],
+          "correctIndex": 0,
+          "explanation": "4 hours × 5 min gain = 20 min fast → 4:20 PM.",
+          "difficulty": "hard"
+        },
+        {
+          "id": "tpcl5",
+          "type": "clockCalendar",
+          "question": "1 Jan 2024 was Monday. What day is 1 Jan 2025?",
+          "options": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "correctIndex": 2,
+          "explanation": "2024 is leap year → 2 odd days; Mon + 2 = Wednesday.",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "id": "tp_series_1",
+      "title": "Series Test Paper 1",
+      "description": "Number series, letter series, and mixed patterns",
+      "category": "series",
+      "durationMinutes": 20,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpsr1",
+          "type": "series",
+          "question": "3, 9, 27, 81, ?",
+          "options": ["162", "243", "324", "405"],
+          "correctIndex": 1,
+          "explanation": "Multiply by 3 each time → 243.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpsr2",
+          "type": "series",
+          "question": "A, D, G, J, ?",
+          "options": ["K", "L", "M", "N"],
+          "correctIndex": 2,
+          "explanation": "+3 letters each step → M.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpsr3",
+          "type": "series",
+          "question": "1, 1, 2, 3, 5, 8, ?",
+          "options": ["11", "12", "13", "14"],
+          "correctIndex": 2,
+          "explanation": "Fibonacci: 5+8=13.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpsr4",
+          "type": "series",
+          "question": "Z, X, V, T, ?",
+          "options": ["R", "S", "Q", "P"],
+          "correctIndex": 0,
+          "explanation": "Skip one letter backward → R.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpsr5",
+          "type": "series",
+          "question": "2, 5, 10, 17, 26, ?",
+          "options": ["35", "37", "39", "41"],
+          "correctIndex": 1,
+          "explanation": "Differences +3,+5,+7,+9,+11 → 26+11=37.",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "id": "tp_puzzles_1",
+      "title": "Puzzles Test Paper 1",
+      "description": "Logic puzzles and brain teasers",
+      "category": "puzzles",
+      "durationMinutes": 25,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpp1",
+          "type": "puzzles",
+          "question": "I have keys but no locks. I have space but no room. You can enter but can't go outside. What am I?",
+          "options": ["A keyboard", "A map", "A book", "A computer"],
+          "correctIndex": 0,
+          "explanation": "Keyboard has keys, space bar, and enter key.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpp2",
+          "type": "puzzles",
+          "question": "5 cats catch 5 mice in 5 minutes. How many cats catch 100 mice in 100 minutes?",
+          "options": ["5", "20", "25", "100"],
+          "correctIndex": 0,
+          "explanation": "Each cat catches 1 mouse per 5 min; rate stays 5 cats.",
+          "difficulty": "hard"
+        },
+        {
+          "id": "tpp3",
+          "type": "puzzles",
+          "question": "A bat and ball cost ₹110. Bat costs ₹100 more than ball. Ball costs?",
+          "options": ["₹5", "₹10", "₹15", "₹20"],
+          "correctIndex": 0,
+          "explanation": "Ball = ₹5, bat = ₹105, total ₹110.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpp4",
+          "type": "puzzles",
+          "question": "If it takes 6 men 6 days to dig 6 holes, how long for 1 man to dig 1 hole?",
+          "options": ["1 day", "6 days", "36 days", "6 hours"],
+          "correctIndex": 1,
+          "explanation": "1 man digs 1 hole in 6 days at same rate.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpp5",
+          "type": "puzzles",
+          "question": "You are in a race and pass the person in 2nd place. What place are you in?",
+          "options": ["1st", "2nd", "3rd", "4th"],
+          "correctIndex": 1,
+          "explanation": "You take their position — 2nd place.",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "id": "tp_general_1",
+      "title": "General Aptitude Test Paper 1",
+      "description": "Mixed aptitude for competitive exams (SSC, bank, campus)",
+      "category": "generalAptitude",
+      "durationMinutes": 45,
+      "sourceLabel": "Built-in",
+      "questions": [
+        {
+          "id": "tpg1",
+          "type": "generalAptitude",
+          "question": "LCM of 12 and 18?",
+          "options": ["24", "36", "48", "72"],
+          "correctIndex": 1,
+          "explanation": "LCM(12,18) = 36.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpg2",
+          "type": "generalAptitude",
+          "question": "A shopkeeper gives 10% discount on marked price ₹500. SP?",
+          "options": ["₹450", "₹460", "₹470", "₹480"],
+          "correctIndex": 0,
+          "explanation": "10% off 500 = ₹450.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpg3",
+          "type": "generalAptitude",
+          "question": "Compound interest on ₹1000 at 10% for 2 years (annually)?",
+          "options": ["₹200", "₹210", "₹220", "₹250"],
+          "correctIndex": 1,
+          "explanation": "1000×1.1² = 1210; CI = ₹210.",
+          "difficulty": "medium"
+        },
+        {
+          "id": "tpg4",
+          "type": "generalAptitude",
+          "question": "Speed 60 km/h. Distance covered in 2.5 hours?",
+          "options": ["120 km", "140 km", "150 km", "160 km"],
+          "correctIndex": 2,
+          "explanation": "60 × 2.5 = 150 km.",
+          "difficulty": "easy"
+        },
+        {
+          "id": "tpg5",
+          "type": "generalAptitude",
+          "question": "Population 10,000 increases 10% yearly. Population after 2 years?",
+          "options": ["11,000", "12,000", "12,100", "12,200"],
+          "correctIndex": 2,
+          "explanation": "10000 × 1.1² = 12,100.",
+          "difficulty": "medium"
+        }
+      ]
+    }
+  ]
+}

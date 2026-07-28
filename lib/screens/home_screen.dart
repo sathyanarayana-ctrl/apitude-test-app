@@ -5,6 +5,7 @@ import '../models/question_type.dart';
 import '../providers/quiz_session.dart';
 import 'category_screen.dart';
 import 'quiz_screen.dart';
+import 'test_papers_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -61,6 +62,16 @@ class HomeScreen extends StatelessWidget {
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => const CategoryScreen()),
+                ),
+              ),
+              const SizedBox(height: 12),
+              _ActionCard(
+                icon: '📄',
+                title: 'Test Papers',
+                subtitle: '13 full test papers — all aptitude types',
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const TestPapersScreen()),
                 ),
               ),
               const SizedBox(height: 12),

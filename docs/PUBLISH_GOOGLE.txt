@@ -1,0 +1,105 @@
+# Publish Aptitude Test App to Google Servers (Firebase Hosting)
+
+Your app will be live at:
+  https://YOUR-PROJECT-ID.web.app
+  https://YOUR-PROJECT-ID.firebaseapp.com
+
+================================================================================
+METHOD A — Automatic deploy via GitHub Actions (RECOMMENDED)
+================================================================================
+
+STEP 1: Create Firebase project
+  1. Open https://console.firebase.google.com
+  2. Click "Add project"
+  3. Name: aptitude-test-app (or your choice)
+  4. Create project
+
+STEP 2: Enable Firebase Hosting
+  1. Firebase Console → Build → Hosting
+  2. Click "Get started"
+  3. Follow the wizard (you can skip manual deploy steps)
+
+STEP 3: Enable Authentication + Firestore (for real-time features)
+  1. Authentication → Get started → Enable Email/Password
+  2. Firestore Database → Create database → Test mode
+
+STEP 4: Create service account for GitHub
+  1. Firebase Console → Project Settings (gear icon)
+  2. Service accounts tab
+  3. Click "Generate new private key"
+  4. Save the JSON file securely
+
+STEP 5: Add secrets to GitHub
+  1. Open https://github.com/sathyanarayana-ctrl/apitude-test-app/settings/secrets/actions
+  2. Add secret: FIREBASE_SERVICE_ACCOUNT
+     → Paste the ENTIRE contents of the JSON key file
+  3. Add secret: FIREBASE_PROJECT_ID
+     → Your Firebase project ID (e.g. aptitude-test-app)
+
+STEP 6: Trigger deploy
+  - Push any commit to main branch, OR
+  - GitHub → Actions → "Deploy to Firebase Hosting" → Run workflow
+
+STEP 7: Open your live app
+  https://YOUR-PROJECT-ID.web.app
+
+================================================================================
+METHOD B — Manual deploy from your PC
+================================================================================
+
+STEP 1: Install tools
+  - Flutter: https://docs.flutter.dev/get-started/install/windows
+  - Node.js: https://nodejs.org
+  - Run in PowerShell:
+      npm install -g firebase-tools
+
+STEP 2: Login and configure Firebase
+  cd C:\Users\Satyanarayana\aptitude-test-app
+  firebase login
+  dart pub global activate flutterfire_cli
+  flutterfire configure
+
+STEP 3: Update .firebaserc
+  Set "default" to your real Firebase project ID.
+
+STEP 4: Build and deploy
+  flutter create . --platforms=web
+  flutter pub get
+  flutter build web --release
+  firebase deploy --only hosting,firestore:rules
+
+STEP 5: Live URL
+  https://YOUR-PROJECT-ID.web.app
+
+================================================================================
+METHOD C — Publish to Google Play Store (Android)
+================================================================================
+
+STEP 1: Install Flutter + Android Studio
+STEP 2: Create signing key:
+  keytool -genkey -v -keystore upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+
+STEP 3: Build release bundle:
+  flutter create . --platforms=android
+  flutter build appbundle --release
+
+STEP 4: Google Play Console
+  1. https://play.google.com/console
+  2. Create app → Upload AAB from:
+     build/app/outputs/bundle/release/app-release.aab
+  3. Complete store listing and publish
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+- "Firebase not configured": Run flutterfire configure
+- "Deploy failed": Check FIREBASE_SERVICE_ACCOUNT secret in GitHub
+- "Permission denied" on Firestore: Run firebase deploy --only firestore:rules
+- Blank page after deploy: Ensure flutter build web completed successfully
+
+================================================================================
+QUICK SCRIPT (after tools installed)
+================================================================================
+
+  .\tools\publish_google.ps1

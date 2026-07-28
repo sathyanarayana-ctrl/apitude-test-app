@@ -25,6 +25,18 @@ jobs:
       - name: Generate platform files
         run: flutter create . --platforms=web
 
+      - name: Generate Firebase web config
+        env:
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+          FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
+          FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
+          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+          FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
+        run: dart run tools/generate_firebase_options_ci.dart
+
+      - name: Analyze project
+        run: flutter analyze
+
       - name: Build Flutter web release
         run: flutter build web --release
 
